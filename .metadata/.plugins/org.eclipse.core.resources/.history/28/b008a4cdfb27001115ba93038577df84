@@ -1,0 +1,14 @@
+package com.microsservices.processamento.consumer;
+
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.messaging.handler.annotation.Payload;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ProcessamentoConsumer {
+
+	@RabbitListener(queues = "{broker.queue.procesamento.name}")
+	public void listenerProcessamentoQueue(@Payload String descricao) {
+		
+	}
+}

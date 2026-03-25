@@ -1,0 +1,5 @@
+package com.microsservices.microsservices.controller;
+
+public class PedidoController {
+
+}

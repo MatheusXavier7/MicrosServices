@@ -1,0 +1,5 @@
+package com.microsservices.processamento.model.dto;
+
+public class PedidoDTO {
+
+}

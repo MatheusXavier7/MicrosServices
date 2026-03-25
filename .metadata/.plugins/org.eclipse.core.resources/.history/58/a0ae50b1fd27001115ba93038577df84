@@ -1,0 +1,11 @@
+spring.application.name=microsservices
+server.port=8080
+
+spring.datasource.url=jdbc:mysql://localhost:3306/ms-pedido
+spring.datasource.username=root
+spring.datasource.password=root
+
+spring.jpa.hibernate.ddl-auto=update
+
+spring.rabbitmq.adresses=amqps://fumuhxos:kDw4GqCJ_OO_gY2Kn8-XgNu9jm3v81QI@leopard.lmq.cloudamqp.com/fumuhxos
+broker.queue.procesamento.name=exchange.processamento

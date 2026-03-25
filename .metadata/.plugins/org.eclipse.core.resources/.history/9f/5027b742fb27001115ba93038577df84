@@ -1,0 +1,5 @@
+package com.microsservices.processamento.config;
+
+public class RabbitMQConfig {
+
+}

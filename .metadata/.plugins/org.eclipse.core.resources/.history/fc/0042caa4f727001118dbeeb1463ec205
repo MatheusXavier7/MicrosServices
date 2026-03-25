@@ -1,0 +1,5 @@
+package com.microsservices.microsservices.service;
+
+public class PedidoService {
+
+}

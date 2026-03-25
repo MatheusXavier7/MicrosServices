@@ -1,0 +1,6 @@
+spring.application.name=microsservices
+server.port=8080
+spring.datasource.driver-url=jdbc:postgresql:localhost:5432/ms-pedido
+spring.datasource.username=postgres
+spring.datasource.password=root
+spring.jpa.hibernate.ddl-auto=update

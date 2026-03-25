@@ -1,0 +1,36 @@
+package com.microsservices.processamento.config;
+
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.support.converter.JacksonJsonMessageConverter;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class RabbitMQConfig {
+
+    @Value("${broker.queue.procesamento.name}")
+    private String queue;
+
+    @Bean
+    public Queue queue() {
+        return new Queue(queue, true);
+    }
+
+    @Bean
+    public JacksonJsonMessageConverter messageConverter() {
+        return new JacksonJsonMessageConverter();
+    }
+
+    @Bean
+    public RabbitTemplate rabbitTemplate(
+            ConnectionFactory connectionFactory,
+            JacksonJsonMessageConverter messageConverter
+    ) {
+        RabbitTemplate template = new RabbitTemplate();
+        template.setConnectionFactory(connectionFactory);
+        template.setMessageConverter(messageConverter);
+        return template;
+    }
+}

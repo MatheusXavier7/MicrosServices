@@ -1,0 +1,5 @@
+package com.microsservices.processamento.consumer;
+
+public class ProcessamentoConsumer {
+
+}

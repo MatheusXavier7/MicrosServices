@@ -1,0 +1,12 @@
+package com.microsservices.processamento.consumer;
+
+import org.springframework.messaging.handler.annotation.Payload;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ProcessamentoConsumer {
+
+	public void listenerProcessamentoQueue(@Payload String descricao) {
+		
+	}
+}
